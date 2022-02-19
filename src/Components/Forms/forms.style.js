@@ -9,12 +9,13 @@ export const FormTextLabelStyle = styled.div`
 
 export const FormTextStyle = styled.div`
   height: 40px;
+  margin-bottom: ${Vars.size.px32};
 `
 
 export const FormTextInput = styled.input`
   height: 32px;
   margin-bottom: 
-  width: ${(props) => 
+  width: ${(props) =>
     props.full ? '100%' : 'auto'};
   width: 100%;
 `
