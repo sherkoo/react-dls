@@ -9,6 +9,7 @@ export const TableStyle = styled.table`
   border-collapse: collapse;
   width: 100%;
   text-align: ${handleAlign};
+  margin-bottom: ${Vars.size.em24};
 `;
 
 export const TableHeadStyle = styled.thead`
