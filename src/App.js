@@ -3,8 +3,34 @@ import Dropdown from "./Components/Dropdown";
 import { FormText } from "./Components/Forms";
 import { ButtonGroup } from "./Components/Buttons/button.style";
 import { H1, H2, H3, Paragraph } from "./Components/Typography";
+import { Table, TableHead, TableBody } from "./Components/Tables";
 
-const mockData = ['one', 'two', 'thre', 'one', 'two', 'thre', 'one', 'two', 'thre', 'one', 'two', 'thre'];
+const mockData = [
+  "one",
+  "two",
+  "thre",
+  "one",
+  "two",
+  "thre",
+  "one",
+  "two",
+  "thre",
+  "one",
+  "two",
+  "thre",
+];
+
+const tableData = [
+  {
+    items: ["one", "two", "three", "four"],
+  },
+  {
+    items: ["one", "two", "three", "four"],
+  },
+  {
+    items: ["one", "two", "three", "four"],
+  },
+];
 
 function App() {
   return (
@@ -74,10 +100,23 @@ function App() {
         <H2 label="Headline 2" />
         <H3 label="Headline 3" />
         <Paragraph label=" Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam aliquid enim odit aperiam commodi a officiis nihil Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam aliquid enim odit aperiam commodi a officiis nihil" />
-        <Paragraph label=" 
-        rem ipsum necessitatibus nemo fugiat, dolores suscipit, non nam amet. Fugit, numquam nemo!" />
-
+        <Paragraph
+          label=" 
+        rem ipsum necessitatibus nemo fugiat, dolores suscipit, non nam amet. Fugit, numquam nemo!"
+        />
       </div>
+      <hr />
+      <H1 label="Tables" />
+      <Table
+        head={["Table1", "Table2", "Table3", "Table4"]}
+        align="left"
+        body={tableData}
+      />
+      <Table
+        head={["Table1", "Table2", "Table3", "Table4"]}
+        align="right"
+        body={tableData}
+      />
     </div>
   );
 }
