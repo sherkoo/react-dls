@@ -4,6 +4,7 @@ import { FormText } from "./Components/Forms";
 import { ButtonGroup } from "./Components/Buttons/button.style";
 import { H1, H2, H3, Paragraph } from "./Components/Typography";
 import { Table, TableHead, TableBody } from "./Components/Tables";
+import CheckBox from "./Components/Checkbox";
 
 const mockData = [
   "one",
@@ -33,20 +34,24 @@ const tableData = [
 ];
 
 function App() {
+  const handleClick = () => {
+    alert('button clicked')
+  }
+
   return (
     <div className="App">
       <h1>Design system</h1>
       <hr />
       <h3>Buttons primary</h3>
       <ButtonGroup>
-        <Button label="Large button" size="large" />
+        <Button click={() => handleClick()} label="Large button" size="large" />
         <Button label="Medium button" size="medium" />
         <Button label="Small button" size="small" />
       </ButtonGroup>
       <hr />
       <h3>Buttons secondary</h3>
       <ButtonGroup>
-        <Button label="Large button" size="large" type="secondary" />
+        <Button click={() => handleClick()} label="Large button" size="large" type="secondary" />
         <Button label="Medium button" size="medium" type="secondary" />
         <Button label="Small button" size="small" type="secondary" />
       </ButtonGroup>
@@ -117,6 +122,11 @@ function App() {
         align="right"
         body={tableData}
       />
+      <hr />
+      <H1 label="Checkbox" />
+      <CheckBox click={() => handleClick()} label="Check box label" />
+      <CheckBox label="Check box label" />
+      <CheckBox />
     </div>
   );
 }
