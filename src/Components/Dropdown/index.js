@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 import {
   DropdownButton,
@@ -16,9 +16,22 @@ import {
 
 function Dropdown(props) {
   const [expanded, setExpanded] = useState(false);
+  const refDropdown = useRef(null);
 
-  const handleExpand = () => {
-    if(expanded === true){
+  // handle click outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (!refDropdown.current.contains(event.target)) {
+        setExpanded(false)
+      }
+    }
+
+    document.addEventListener('mousedown', handleClickOutside)
+
+  }, [expanded])
+
+  const handleExpand = (event) => {
+    if (expanded === true) {
       setExpanded(false)
     } else {
       setExpanded(true)
@@ -26,7 +39,7 @@ function Dropdown(props) {
   }
 
   return (
-    <DrodpdownContainer>
+    <DrodpdownContainer ref={refDropdown} >
       <DropdownButton onClick={handleExpand}>
         <span>{props.label}</span>
         <DropdownIcon>Icon</DropdownIcon>
@@ -34,7 +47,7 @@ function Dropdown(props) {
       {expanded && (
         <DropdownContents>
           {props.data.map((d, index) => {
-            return <DrodpdownContentsItem>{d}</DrodpdownContentsItem>;
+            return <DrodpdownContentsItem key={index}>{d}</DrodpdownContentsItem>;
           })}
         </DropdownContents>
       )}
