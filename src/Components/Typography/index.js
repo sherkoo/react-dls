@@ -1,4 +1,5 @@
 import React from 'react';
+import { LabelStyle } from './typography.style';
 
 function H1(props) {
   return (
@@ -32,4 +33,12 @@ function Paragraph(props) {
   );
 }
 
-export { H1, H2, H3, Paragraph };
+function Label(props) {
+  return (
+    <LabelStyle>
+      {props.label}
+    </LabelStyle>
+  );
+}
+
+export { H1, H2, H3, Paragraph, Label };

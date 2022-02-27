@@ -7,6 +7,8 @@ export const CheckBoxButton = styled.div`
   display: block;
   border: 2px solid grey;
   border-radius: 4px;
+  transition: all .25s ease-in-out;
+  background-color: white;
 
   ${(props) =>
     props.checked && css`
@@ -23,8 +25,13 @@ export const CheckBoxContainer = styled.div`
   align-items: center;
   margin-bottom: 8px;
   cursor: pointer;
+  transition: all .25s ease-in-out;
 
   &: hover ${CheckBoxButton}{
-    border-color: blue;
+    border-color: blue !important;
+  }
+
+  &: hover label{
+    cursor: pointer;
   }
 `;

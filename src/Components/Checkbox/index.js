@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { CheckBoxContainer, CheckBoxButton } from './checkbox.style';
+import { Label } from '../Typography/index';
 
 function CheckBox(props) {
   const [checked, setChecked] = useState(true);
@@ -19,7 +20,7 @@ function CheckBox(props) {
   return (
     <CheckBoxContainer onClick={() => handleClick()}>
       <CheckBoxButton checked={checked} />
-      {props.label}
+      <Label label={props.label} />
     </CheckBoxContainer>
   );
 }
