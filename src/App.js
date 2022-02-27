@@ -5,6 +5,7 @@ import { ButtonGroup } from "./Components/Buttons/button.style";
 import { H1, H2, H3, Paragraph, Label } from "./Components/Typography";
 import { Table, TableHead, TableBody } from "./Components/Tables";
 import CheckBox from "./Components/Checkbox";
+import { NavigationLeft } from "./Components/Navigation";
 
 const mockData = [
   "one",
@@ -128,6 +129,10 @@ function App() {
       <CheckBox click={() => handleClick()} label="Check box label" />
       <CheckBox label="Check box label" />
       <CheckBox />
+      <div>
+        <H1 label="Navigation" />
+        <NavigationLeft />
+      </div>
     </div>
   );
 }
