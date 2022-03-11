@@ -11,15 +11,18 @@ export const Vars = {
     em24: "1.5em",
     em32: "2em",
     em40: "2.5em",
+    em48: "2.75em",
   },
   // colors
   color: {
     blue: "blue",
+    blueLight: "#b4d8ff",
     white: "#fff",
     grey: "#eee",
     greyDark: "#333",
-    error: "red",
-    success: "green",
+    error: "#ff7878",
+    success: "#6dee6d",
+    warning: "#ffd760",
   },
   // typography
   fontFamily: "Open-Sans, Helvetica, Sans-Serif",
