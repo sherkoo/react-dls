@@ -8,6 +8,7 @@ import CheckBox from "./Components/Checkbox";
 import { NavigationLeft } from "./Components/Navigation";
 import Messaging from "./Components/Messaging";
 import warningIcon from "../src/Components/Messaging/icons/warning.svg";
+import Header from './Components/Header';
 
 
 const mockData = [
@@ -143,6 +144,11 @@ function App() {
         <Messaging type="error" label="Error message" />
         <Messaging type="success" label="Success message" />
         <Messaging type="warning" label="Warning message" />
+      </div>
+      <div>
+        <hr />
+        <H1 label="Header" />
+        <Header />
       </div>
     </div>
   );
