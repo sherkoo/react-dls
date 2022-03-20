@@ -1,8 +1,37 @@
-# Getting Started with Create React App
+# React DLS
+- Handy style guide for pre-built components in React
+- Use this to copy components into existing projects to save time and not recreate the wheel
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Table of contents
+1. [Architecture](##Architecture)
+2. [Scripts](##Scripts)
+3. [Todos](##Todos)
+
+## Architecture
+```
+.
+├── src
+│   ├── Components
+│   └── TODO.md
+├── project-b
+│   └── TODO.md
+└── project-c
+    └── TODO.md
+```
+
+- Styles
+  - Holds global vars, and style vars
+- Components
+  - Holds bite size front-end components
+
+## Todos
+- [ ] Add colors to global vars 
+- [ ] Add Container component to app.js
+- [ ] Add Pill component
+
+## Scripts
 
 In the project directory, you can run:
 
