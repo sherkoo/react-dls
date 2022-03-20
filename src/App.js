@@ -10,6 +10,7 @@ import Messaging from "./Components/Messaging";
 import warningIcon from "../src/Components/Messaging/icons/warning.svg";
 import Header from './Components/Header';
 import Footer from "./Components/Footer";
+import Container from "./Components/Container/Container";
 
 const mockData = [
   "one",
@@ -47,65 +48,65 @@ function App() {
     <div className="App">
       <h1>Design system</h1>
       <hr />
-      <h3>Buttons primary</h3>
-      <ButtonGroup>
-        <Button click={() => handleClick()} label="Large button" size="large" />
-        <Button label="Medium button" size="medium" />
-        <Button label="Small button" size="small" />
-      </ButtonGroup>
-      <hr />
-      <h3>Buttons secondary</h3>
-      <ButtonGroup>
-        <Button click={() => handleClick()} label="Large button" size="large" type="secondary" />
-        <Button label="Medium button" size="medium" type="secondary" />
-        <Button label="Small button" size="small" type="secondary" />
-      </ButtonGroup>
-      <hr />
-      <h3>Buttons disabled</h3>
-      <ButtonGroup size="large">
-        <Button label="Large button" size="large" type="disabled" />
-        <Button label="Medium button" size="medium" type="disabled" />
-        <Button label="Small button" size="small" type="disabled" />
-      </ButtonGroup>
-      <hr />
-      <h3>Buttons ghost</h3>
-      <ButtonGroup>
-        <Button label="Large button" size="large" type="ghost" />
-        <Button label="Medium button" size="medium" type="ghost" />
-        <Button label="Small button" size="small" type="ghost" />
-      </ButtonGroup>
-      <hr />
-      <h3>Buttons Error</h3>
-      <ButtonGroup>
-        <Button label="Large button" size="large" type="error" />
-        <Button label="Medium button" size="medium" type="error" />
-        <Button label="Small button" size="small" type="error" />
-      </ButtonGroup>
-      <h3>Buttons Success</h3>
-      <ButtonGroup>
-        <Button label="Large button" size="large" type="success" />
-        <Button label="Medium button" size="medium" type="success" />
-        <Button label="Small button" size="small" type="success" />
-      </ButtonGroup>
 
-      <hr />
+      <Container title="Buttons">
+        <h3>Buttons primary</h3>
+        <ButtonGroup>
+          <Button click={() => handleClick()} label="Large button" size="large" />
+          <Button label="Medium button" size="medium" />
+          <Button label="Small button" size="small" />
+        </ButtonGroup>
+        <hr />
+        <h3>Buttons secondary</h3>
+        <ButtonGroup>
+          <Button click={() => handleClick()} label="Large button" size="large" type="secondary" />
+          <Button label="Medium button" size="medium" type="secondary" />
+          <Button label="Small button" size="small" type="secondary" />
+        </ButtonGroup>
+        <hr />
+        <h3>Buttons disabled</h3>
+        <ButtonGroup size="large">
+          <Button label="Large button" size="large" type="disabled" />
+          <Button label="Medium button" size="medium" type="disabled" />
+          <Button label="Small button" size="small" type="disabled" />
+        </ButtonGroup>
+        <hr />
+        <h3>Buttons ghost</h3>
+        <ButtonGroup>
+          <Button label="Large button" size="large" type="ghost" />
+          <Button label="Medium button" size="medium" type="ghost" />
+          <Button label="Small button" size="small" type="ghost" />
+        </ButtonGroup>
+        <hr />
+        <h3>Buttons Error</h3>
+        <ButtonGroup>
+          <Button label="Large button" size="large" type="error" />
+          <Button label="Medium button" size="medium" type="error" />
+          <Button label="Small button" size="small" type="error" />
+        </ButtonGroup>
+        <h3>Buttons Success</h3>
+        <ButtonGroup>
+          <Button label="Large button" size="large" type="success" />
+          <Button label="Medium button" size="medium" type="success" />
+          <Button label="Small button" size="small" type="success" />
+        </ButtonGroup>
+      </Container>
 
-      <h1>Dropdowns</h1>
-      <ButtonGroup size="large" direction="row">
-        <Dropdown label="Dropdown" data={mockData} />
-        <Dropdown label="Dropdown" data={mockData} />
-        <Dropdown label="Dropdown" data={mockData} />
-      </ButtonGroup>
+      <Container title="Dropdowns">
+        <ButtonGroup size="large" direction="row">
+          <Dropdown label="Dropdown" data={mockData} />
+          <Dropdown label="Dropdown" data={mockData} />
+          <Dropdown label="Dropdown" data={mockData} />
+        </ButtonGroup>
+      </Container>
 
-      <hr />
-      <div>
+      <Container title="Forms">
         <FormText label="Form label" type="text" />
         <FormText label="Form label" type="password" />
         <FormText label="Form label" type="email" />
-      </div>
+      </Container>
 
-      <hr />
-      <div>
+      <Container title="Typography">
         <H1 label="Headline 1" />
         <H2 label="Headline 2" />
         <H3 label="Headline 3" />
@@ -115,48 +116,51 @@ function App() {
           label=" 
         rem ipsum necessitatibus nemo fugiat, dolores suscipit, non nam amet. Fugit, numquam nemo!"
         />
-      </div>
-      <hr />
-      <H1 label="Tables" />
-      <Table
-        head={["Table1", "Table2", "Table3", "Table4"]}
-        align="left"
-        body={tableData}
-      />
-      <Table
-        head={["Table1", "Table2", "Table3", "Table4"]}
-        align="right"
-        body={tableData}
-      />
-      <hr />
-      <H1 label="Checkbox" />
-      <CheckBox click={() => handleClick()} label="Check box label" />
-      <CheckBox label="Check box label" />
-      <CheckBox />
-      <div>
-        <H1 label="Navigation" />
+      </Container>
+
+      <Container title="Tables">
+        <Table
+          head={["Table1", "Table2", "Table3", "Table4"]}
+          align="left"
+          body={tableData}
+        />
+        <Table
+          head={["Table1", "Table2", "Table3", "Table4"]}
+          align="right"
+          body={tableData}
+        />
+      </Container>
+
+      <Container title="Checkboxes">
+        <CheckBox click={() => handleClick()} label="Check box label" />
+        <CheckBox label="Check box label" />
+        <CheckBox />
+      </Container>
+
+      <Container title="Navigation">
         <NavigationLeft />
-      </div>
-      <hr />
-      <div>
-        <H1 label="Footer" />
+      </Container>
+
+      <Container title="Footer">
         <Footer position="left">
           <Button label="testing" />
         </Footer>
-      </div>
-      <div>
-        <hr />
-        <H1 label="Messaging" />
+      </Container>
+
+      <Container title="Messaging">
         <Messaging type="info" icon={warningIcon} label="Default message" />
         <Messaging type="error" label="Error message" />
         <Messaging type="success" label="Success message" />
         <Messaging type="warning" label="Warning message" />
-      </div>
-      <div>
-        <hr />
-        <H1 label="Header" />
+      </Container>
+
+      <Container title="Header">
         <Header />
-      </div>
+      </Container>
+
+      <Container title="Container">
+        <Container>elements inside container go here</Container>
+      </Container>
     </div>
   );
 }
