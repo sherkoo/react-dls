@@ -6,6 +6,9 @@ import { H1, H2, H3, Paragraph, Label } from "./Components/Typography";
 import { Table, TableHead, TableBody } from "./Components/Tables";
 import CheckBox from "./Components/Checkbox";
 import { NavigationLeft } from "./Components/Navigation";
+import Messaging from "./Components/Messaging";
+import warningIcon from "../src/Components/Messaging/icons/warning.svg";
+import Header from './Components/Header';
 import Footer from "./Components/Footer";
 
 const mockData = [
@@ -140,6 +143,19 @@ function App() {
         <Footer position="left">
           <Button label="testing" />
         </Footer>
+      </div>
+      <div>
+        <hr />
+        <H1 label="Messaging" />
+        <Messaging type="info" icon={warningIcon} label="Default message" />
+        <Messaging type="error" label="Error message" />
+        <Messaging type="success" label="Success message" />
+        <Messaging type="warning" label="Warning message" />
+      </div>
+      <div>
+        <hr />
+        <H1 label="Header" />
+        <Header />
       </div>
     </div>
   );
