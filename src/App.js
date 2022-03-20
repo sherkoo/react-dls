@@ -6,6 +6,7 @@ import { H1, H2, H3, Paragraph, Label } from "./Components/Typography";
 import { Table, TableHead, TableBody } from "./Components/Tables";
 import CheckBox from "./Components/Checkbox";
 import { NavigationLeft } from "./Components/Navigation";
+import Footer from "./Components/Footer";
 
 const mockData = [
   "one",
@@ -132,6 +133,13 @@ function App() {
       <div>
         <H1 label="Navigation" />
         <NavigationLeft />
+      </div>
+      <hr />
+      <div>
+        <H1 label="Footer" />
+        <Footer position="left">
+          <Button label="testing" />
+        </Footer>
       </div>
     </div>
   );

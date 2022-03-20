@@ -17,7 +17,7 @@ export const CheckBoxButton = styled.div`
       background-image: url(${checkIcon});
       background-size: cover;
     `};
-`;
+`; 
 
 export const CheckBoxContainer = styled.div`
   display: flex;
