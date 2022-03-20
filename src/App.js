@@ -11,6 +11,7 @@ import warningIcon from "../src/Components/Messaging/icons/warning.svg";
 import Header from './Components/Header';
 import Footer from "./Components/Footer";
 import Container from "./Components/Container/Container";
+import Pill from "./Components/Pill/Pill";
 
 const mockData = [
   "one",
@@ -160,6 +161,12 @@ function App() {
 
       <Container title="Container">
         <Container>elements inside container go here</Container>
+      </Container>
+
+      <Container title="Pills">
+        <Pill label="Pill1"></Pill>
+        <Pill label="Pill2"></Pill>
+        <Pill label="Pill3"></Pill>
       </Container>
     </div>
   );
