@@ -26,4 +26,15 @@ export const Vars = {
   },
   // typography
   fontFamily: "Open-Sans, Helvetica, Sans-Serif",
+  // screen sizes
+  screen: {
+    mobileSmall: "378px",
+    mobileMedium: "414px",
+    tablePortrait: "728px",
+    tableLandscape: "1024px",
+    desktopSmall: "1024px",
+    desktopMedium: "1200px",
+    desktopLarge: "1300px",
+    desktopXLarge: "1440px",
+  }
 };
