@@ -7,6 +7,7 @@ export const Vars = {
     px24: "24px",
     px32: "32px",
     px40: "40px",
+    em8: ".5em",
     em16: "1em",
     em24: "1.5em",
     em32: "2em",

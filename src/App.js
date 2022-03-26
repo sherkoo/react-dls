@@ -12,6 +12,7 @@ import Header from './Components/Header';
 import Footer from "./Components/Footer";
 import Container from "./Components/Container/Container";
 import Pill from "./Components/Pill/Pill";
+import SearchBar from "./Components/SearchBar/SearchBar";
 
 const mockData = [
   "one",
@@ -167,6 +168,10 @@ function App() {
         <Pill label="Pill1"></Pill>
         <Pill label="Pill2"></Pill>
         <Pill label="Pill3"></Pill>
+      </Container>
+
+      <Container title="Search Bar">
+        <SearchBar />
       </Container>
     </div>
   );

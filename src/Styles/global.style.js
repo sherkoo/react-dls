@@ -12,4 +12,9 @@ export const GlobalStyle = createGlobalStyle`
     background: ${ Vars.colorWhite };
     font-family: ${ Vars.fontFamily };
   }
+
+  a{
+    text-decoration: none;
+    color: ${Vars.color.blue};
+  }
 `;
