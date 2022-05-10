@@ -13,6 +13,7 @@ import Footer from "./Components/Footer";
 import Container from "./Components/Container/Container";
 import Pill from "./Components/Pill/Pill";
 import SearchBar from "./Components/SearchBar/SearchBar";
+import Grid from './Components/Grid/Grid';
 
 const mockData = [
   "one",
@@ -172,6 +173,28 @@ function App() {
 
       <Container title="Search Bar">
         <SearchBar />
+      </Container>
+
+      <Container title="Grid">
+        <Grid columns={2}>
+          <Messaging type="error" label="Grid 1" />
+          <Messaging type="error" label="Grid 2" />
+        </Grid>
+        <Grid columns={3}>
+          <Messaging type="error" label="Grid 1" />
+          <Messaging type="error" label="Grid 2" />
+          <Messaging type="error" label="Grid 3" />
+        </Grid>
+        <Grid columns={4}>
+          <Messaging type="error" label="Grid 1" />
+          <Messaging type="error" label="Grid 2" />
+          <Messaging type="error" label="Grid 3" />
+          <Messaging type="error" label="Grid 4" />
+        </Grid>
+        <Grid columns={75}>
+          <Messaging type="error" label="Grid 1" />
+          <Messaging type="error" label="Grid 2" />
+        </Grid>
       </Container>
     </div>
   );
